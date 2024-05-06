@@ -15,6 +15,10 @@ run/main_scene="res://Cenas/Cena.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameController="*res://Scripts/GameController.gd"
+
 [input]
 
 left={
