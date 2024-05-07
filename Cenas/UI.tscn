@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://2nw8udrldm11"]
+
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="1_mmnoj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8dev"]
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.101961, 0.101961, 0.101961, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mmnoj")
+
+[node name="TimerLetra" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 380
+
+[node name="Balao" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8dev")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/Balao"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+
+[node name="Nome" type="RichTextLabel" parent="MarginContainer/Balao/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "NOME"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Balao"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 90
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="Fala" type="RichTextLabel" parent="MarginContainer/Balao/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsumf djsaklfçdajskf dsajfkqlç fjdkla çfjdksal fjdksalç jkla fjdkasl fjdkaslf çjdaklf "

@@ -9,6 +9,8 @@ func _ready():
 func _unhandled_input(event):
 	if event.is_action_pressed("E") and !GameController.playerInteragindo:
 		print("Interagindo com " + name)
+		var ui = %UI
+		ui.comecaInteracao(falas, nome)
 
 
 func _on_area_2d_body_entered(body):

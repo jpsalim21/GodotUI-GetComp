@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://bjrp4x2a2k277"]
+[gd_scene load_steps=27 format=3 uid="uid://bjrp4x2a2k277"]
 
 [ext_resource type="Texture2D" uid="uid://2wgthr6kp2ip" path="res://Sprites/TX Tileset Grass.png" id="1_k33rk"]
 [ext_resource type="Texture2D" uid="uid://1xgq44lhlxr3" path="res://Sprites/PlayerSprite.png" id="2_7ophs"]
 [ext_resource type="Script" path="res://Scripts/PlayerScript.gd" id="2_idfq3"]
 [ext_resource type="Texture2D" uid="uid://b0fuxi4mn038b" path="res://Sprites/Small-8-Direction-Characters_by_AxulArt.png" id="4_ac2b0"]
 [ext_resource type="Script" path="res://Scripts/NPC.gd" id="4_b78ih"]
+[ext_resource type="PackedScene" uid="uid://2nw8udrldm11" path="res://Cenas/UI.tscn" id="6_212ow"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdy4c"]
 texture = ExtResource("1_k33rk")
@@ -420,6 +421,8 @@ shape = SubResource("RectangleShape2D_xrssc")
 [node name="NPC" type="Node2D" parent="."]
 position = Vector2(59, -48)
 script = ExtResource("4_b78ih")
+nome = "NPC 1"
+falas = PackedStringArray("Olá tudo bem?", "Aqui é apenas um teste")
 
 [node name="Area2D" type="Area2D" parent="NPC"]
 
@@ -434,3 +437,8 @@ texture = SubResource("AtlasTexture_021cp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/StaticBody2D"]
 shape = SubResource("RectangleShape2D_hfcu2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("6_212ow")]
+unique_name_in_owner = true
