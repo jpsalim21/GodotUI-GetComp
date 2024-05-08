@@ -1,10 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://bjrp4x2a2k277"]
+[gd_scene load_steps=21 format=3 uid="uid://bjrp4x2a2k277"]
 
 [ext_resource type="Texture2D" uid="uid://2wgthr6kp2ip" path="res://Sprites/TX Tileset Grass.png" id="1_k33rk"]
 [ext_resource type="Texture2D" uid="uid://1xgq44lhlxr3" path="res://Sprites/PlayerSprite.png" id="2_7ophs"]
 [ext_resource type="Script" path="res://Scripts/PlayerScript.gd" id="2_idfq3"]
-[ext_resource type="Texture2D" uid="uid://b0fuxi4mn038b" path="res://Sprites/Small-8-Direction-Characters_by_AxulArt.png" id="4_ac2b0"]
-[ext_resource type="Script" path="res://Scripts/NPC.gd" id="4_b78ih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdy4c"]
 texture = ExtResource("1_k33rk")
@@ -385,16 +383,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrssc"]
 size = Vector2(12, 5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt0ck"]
-size = Vector2(45, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_021cp"]
-atlas = ExtResource("4_ac2b0")
-region = Rect2(65, 149, 13, 17)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfcu2"]
-size = Vector2(14, 18)
-
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -416,21 +404,3 @@ animation = &"Down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_xrssc")
-
-[node name="NPC" type="Node2D" parent="."]
-position = Vector2(59, -48)
-script = ExtResource("4_b78ih")
-
-[node name="Area2D" type="Area2D" parent="NPC"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Area2D"]
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_nt0ck")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPC"]
-texture = SubResource("AtlasTexture_021cp")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="NPC"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/StaticBody2D"]
-shape = SubResource("RectangleShape2D_hfcu2")
