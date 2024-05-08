@@ -4,6 +4,7 @@ const SPEED = 100.0
 @onready var sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
+	if GameController.playerInteragindo: return
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity = direction.normalized() * SPEED
 	move_and_slide()
