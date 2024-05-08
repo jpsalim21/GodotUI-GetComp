@@ -39,8 +39,21 @@ func proximaFala():
 	
 	escrevendo = true
 	paragrafo.clear()
+	var lendoEfeito = false
+	var falaCompleta = ""
 	
 	for char in falaCarregada[index]:
+		if char == '[':
+			lendoEfeito = true
+		
+		falaCompleta += char
+		
+		if lendoEfeito:
+			if char == ']':
+				lendoEfeito = false
+				paragrafo.text = falaCompleta
+			continue
+		
 		paragrafo.append_text(char)
 		timer.start()
 		await timer.timeout

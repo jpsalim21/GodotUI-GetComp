@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var nome : String
-@export var falas : PackedStringArray
+@export_multiline var falas : PackedStringArray
 
 func _ready():
 	set_process(false)

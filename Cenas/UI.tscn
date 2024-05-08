@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://2nw8udrldm11"]
+[gd_scene load_steps=3 format=3 uid="uid://cxcgtp60w68ua"]
 
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_mmnoj"]
 
@@ -74,4 +74,5 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
-text = "Lorem ipsumf djsaklfçdajskf dsajfkqlç fjdkla çfjdksal fjdksalç jkla fjdkasl fjdkaslf çjdaklf "
+bbcode_enabled = true
+text = "[shake]Lorem[/shake] ipsumf djsaklfçdajskf dsajfkqlç fjdkla çfjdksal fjdksalç jkla fjdkasl fjdkaslf çjdaklf "
